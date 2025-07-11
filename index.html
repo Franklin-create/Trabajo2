@@ -2,80 +2,132 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Helados Deliciosos</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background: #fceabb;
+            font-family: 'Segoe UI', sans-serif;
+            background: #fef5e7;
             color: #5a2a27;
-            margin: 0; padding: 0;
+            line-height: 1.6;
             text-align: center;
         }
+
         header {
             background: #f39c12;
             padding: 20px;
-            font-size: 2em;
             color: white;
-            font-weight: bold;
+            font-size: 2.5em;
         }
+
         .flavors {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
-            margin: 20px;
-            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+            gap: 30px;
         }
+
         .flavor {
             background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            width: 200px;
-            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            transition: transform 0.3s ease;
         }
+
+        .flavor:hover {
+            transform: translateY(-5px);
+        }
+
         .flavor img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 12px 12px 0 0;
         }
+
         .flavor h3 {
             margin: 10px 0 5px;
         }
+
         .flavor p {
-            font-size: 0.9em;
-            color: #7f7f7f;
+            font-size: 0.95em;
+            padding: 0 10px 10px;
+            color: #7a7a7a;
         }
-        footer {
-            margin-top: 40px;
-            padding: 10px;
+
+        button {
+            margin: 10px;
+            padding: 8px 16px;
             background: #f39c12;
+            border: none;
+            border-radius: 6px;
             color: white;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: #d68910;
+        }
+
+        footer {
+            background: #f39c12;
+            padding: 15px;
+            color: white;
+            font-size: 0.9em;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
 
-<header>Helados Deliciosos</header>
+<header>
+    <h1>🍦 Helados Deliciosos</h1>
+</header>
 
-<section class="flavors">
-    <div class="flavor">
-        <img src="https://images.unsplash.com/photo-1505253210343-2a370d8e1b89?auto=format&fit=crop&w=400&q=80" alt="Helado de Vainilla" />
-        <h3>Vainilla Clásica</h3>
-        <p>El sabor más tradicional, suave y cremoso.</p>
-    </div>
-    <div class="flavor">
-        <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=400&q=80" alt="Helado de Chocolate" />
-        <h3>Chocolate Intenso</h3>
-        <p>Para los amantes del chocolate oscuro y rico.</p>
-    </div>
-    <div class="flavor">
-        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80" alt="Helado de Fresa" />
-        <h3>Fresa Natural</h3>
-        <p>Un toque frutal, dulce y refrescante.</p>
-    </div>
-</section>
+<main class="flavors">
+    <article class="flavor">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1505253210343-2a370d8e1b89?auto=format&fit=crop&w=400&q=80" alt="Helado de Vainilla">
+            <figcaption>
+                <h3>Vainilla Clásica</h3>
+                <p>El sabor más tradicional, suave y cremoso.</p>
+            </figcaption>
+        </figure>
+        <button>Ver más</button>
+    </article>
+
+    <article class="flavor">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1500917293891-ef795e70e1f6?auto=format&fit=crop&w=400&q=80" alt="Helado de Chocolate">
+            <figcaption>
+                <h3>Chocolate Intenso</h3>
+                <p>Para los amantes del chocolate oscuro y rico.</p>
+            </figcaption>
+        </figure>
+        <button>Ver más</button>
+    </article>
+
+    <article class="flavor">
+        <figure>
+            <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=400&q=80" alt="Helado de Fresa">
+            <figcaption>
+                <h3>Fresa Natural</h3>
+                <p>Un toque frutal, dulce y refrescante.</p>
+            </figcaption>
+        </figure>
+        <button>Ver más</button>
+    </article>
+</main>
 
 <footer>
-    &copy; 2025 Helados Deliciosos - Todos los derechos reservados
+    &copy; 2025 Helados Deliciosos. Todos los derechos reservados.
 </footer>
 
 </body>
